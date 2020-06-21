@@ -4,7 +4,7 @@
     </IfModule>
 
     RewriteEngine On
-    RewriteBase /chatSystem
+    #RewriteBase /chatSystem
 
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .

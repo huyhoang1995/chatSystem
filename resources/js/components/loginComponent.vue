@@ -3,7 +3,7 @@
           <form action="" method="POST" class="form-horizontal" role="form">
                 <div class="form-group">
                     <p>Account</p>
-                    <input  v-model ="account"/>
+                    <input  v-model ="email"/>
                 </div>
                 <div class="form-group">
                     <p>password</p>
@@ -28,7 +28,7 @@
         },
         data() {
             return {
-                account: '',
+                email: '',
                 password: '',
              
             }
@@ -40,7 +40,7 @@
     
             login: function () {
              
-                var param = service.chatService.data.login(this.account, this.password);
+                var param = service.chatService.data.login(this.email, this.password);
                 service.chatService.action.login(param).then((result) => {
                     console.log(result)
                  

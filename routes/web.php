@@ -20,7 +20,7 @@ Route::get('/login', function () {
     return view('login');
 });
 Route::post('/login', 'Rest\LoginCtrl@login'); // thêm mới user clinic
-
+Route::get('/detailUser', 'Rest\LoginCtrl@detailUser'); // thêm mới user clinic
 Route::group(['prefix' => 'api/v1'], function () {
 	//user
 	Route::get('/listChat', 'Rest\ChatCtrl@listChat'); //danh sách user clinic
@@ -30,3 +30,7 @@ Route::group(['prefix' => 'api/v1'], function () {
 	Route::get('/detailUser', 'Rest\LoginCtrl@detailUser'); // thêm mới user clinic
 
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
