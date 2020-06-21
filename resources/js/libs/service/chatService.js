@@ -7,9 +7,9 @@ const chatService = {
             params.append("images", images || "");
             return params;
         },
-        login:function (account, password) {
+        login:function (email, password) {
             return{
-                account: account || "",
+                email: email || "",
                 password: password || "",
             }
         }
